@@ -14,6 +14,10 @@
     "start": "node index.js",
     "devstart": "nodemon index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clyzer/naves-espaciales.git"
+  },
   "author": "Diego Sánchez",
   "license": "ISC"
 }
