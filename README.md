@@ -1,7 +1,7 @@
 <a name="inicio"></a>
 
-[![Lenguaje][language-shield][language-url]
-[![Calidad][codequality-shield][codequality-url]
+[![Lenguaje][language-shield]][language-url]
+[![Calidad][codequality-shield]][codequality-url]
 [![Estrellas][stars-shield]][stars-url]
 [![Errores][issues-shield]][issues-url]
 [![Licencia GPL][license-shield]][license-url]
@@ -150,6 +150,10 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 
 
 <!-- MARKDOWN -->
+[language-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?label=Lenguaje
+[language-url]: https://github.com/Clyzer/naves-espaciales/
+[codequality-shield]: https://img.shields.io/codefactor/grade/github/Clyzer/naves-espaciales?label=calidad
+[codequality-url]: https://www.codefactor.io/repository/github/clyzer/naves-espaciales
 [stars-shield]: https://img.shields.io/github/stars/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Estrellas
 [stars-url]: https://github.com/Clyzer/naves-espaciales/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Errores
@@ -159,7 +163,3 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 [product-screenshot]: images/captura.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[language-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?label=Lenguaje
-[language-url]: https://github.com/Clyzer/naves-espaciales/
-[codequality-shield]: https://img.shields.io/codefactor/grade/github/Clyzer/naves-espaciales?label=calidad
-[codequality-url]: https://www.codefactor.io/repository/github/clyzer/naves-espaciales
