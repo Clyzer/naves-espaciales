@@ -1,10 +1,10 @@
 <a name="inicio"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![GPL License][license-shield]][license-url]
+[![Lenguaje][language-shield][language-url]
+[![Calidad][codequality-shield][codequality-url]
+[![Estrellas][stars-shield]][stars-url]
+[![Errores][issues-shield]][issues-url]
+[![Licencia GPL][license-shield]][license-url]
 
 <!-- LOGO DEL PROYECTO -->
 <br />
@@ -58,7 +58,7 @@
 <!-- Sobre el proyecto -->
 ## Sobre el proyecto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Captura de pantalla del proyecto][product-screenshot]](https://github.com/Clyzer/naves-espaciales)
 
 Un reto técnico personal para SofkaU (Training League) que permite explorar, crear y clasificar información de naves espaciales y sus características
 
@@ -140,7 +140,7 @@ Distribuido bajo la licencia GPL 3.0. Mira `LICENSE.txt` para mas información.
 <!-- Contacto -->
 ## Contacto
 
-Diego Sánchez - [@Clyzer](https://twitter.com/clyzer)
+Diego Sánchez - [@TheClyzer](https://twitter.com/TheClyzer)
 
 Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.com/Clyzer/naves-espaciales)
 
@@ -149,18 +149,17 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Clyzer/naves-espaciales.svg?style=for-the-badge
-[contributors-url]: https://github.com/Clyzer/naves-espaciales/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Clyzer/naves-espaciales.svg?style=for-the-badge
-[forks-url]: https://github.com/Clyzer/naves-espaciales/network/members
-[stars-shield]: https://img.shields.io/github/stars/Clyzer/naves-espaciales.svg?style=for-the-badge
+<!-- MARKDOWN -->
+[stars-shield]: https://img.shields.io/github/stars/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Estrellas
 [stars-url]: https://github.com/Clyzer/naves-espaciales/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Clyzer/naves-espaciales.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Errores
 [issues-url]: https://github.com/Clyzer/naves-espaciales/issues
-[license-shield]: https://img.shields.io/github/license/Clyzer/naves-espaciales.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Licencia
 [license-url]: https://github.com/Clyzer/naves-espaciales/blob/master/LICENSE.txt
 [product-screenshot]: images/captura.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[language-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?label=Lenguaje
+[language-url]: https://github.com/Clyzer/naves-espaciales/
+[codequality-shield]: https://img.shields.io/codefactor/grade/github/Clyzer/naves-espaciales?label=calidad
+[codequality-url]: https://www.codefactor.io/repository/github/clyzer/naves-espaciales
