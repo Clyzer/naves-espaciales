@@ -68,7 +68,9 @@ Un reto técnico personal para SofkaU (Training League) que permite explorar, cr
 
 ### Creado con
 
+* [![Node][Node.js]][Node-url]
 * [![React][React.js]][React-url]
+* [![Express][Express.js]][Express-url]
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
 
@@ -160,5 +162,9 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 [license-shield]: https://img.shields.io/github/license/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Licencia
 [license-url]: https://github.com/Clyzer/naves-espaciales/blob/master/LICENSE.txt
 [product-screenshot]: images/captura.png
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Node.js]: https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js
+[Node-url]: https://nodejs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react
 [React-url]: https://reactjs.org/
+[Express.js]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=express
+[Express-url]: https://expressjs.com
