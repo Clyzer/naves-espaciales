@@ -148,7 +148,6 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 
 
 
-
 <!-- MARKDOWN -->
 [language-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?style=for-the-badge&label=Lenguaje
 [language-url]: https://github.com/Clyzer/naves-espaciales/
