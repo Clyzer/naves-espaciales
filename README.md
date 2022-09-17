@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Clyzer/naves-espaciales">
-    <img src="public/images/logo.png" alt="Logo" width="80" height="80"> <!-- El logo fue obtenido en openmoji.org bajo una licencia CC BY-SA 4.0 -->
+    <img src="frontend/public/logo192.png" alt="Logo" width="80" height="80"> <!-- El logo fue obtenido en openmoji.org bajo una licencia CC BY-SA 4.0 -->
   </a>
 
 <h3 align="center">Naves Espaciales</h3>
