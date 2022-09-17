@@ -1,0 +1,24 @@
+{
+  "name": "naves-espaciales",
+  "version": "1.0.0",
+  "description": "App maestra que une bakcend y frontend",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run start\"",
+    "dev": "concurrently \"cd backend && npm run devstart\" \"cd frontend && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clyzer/naves-espaciales.git"
+  },
+  "author": "Diego Sánchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clyzer/naves-espaciales/issues"
+  },
+  "homepage": "https://github.com/Clyzer/naves-espaciales#readme",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
