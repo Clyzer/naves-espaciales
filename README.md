@@ -140,9 +140,9 @@ Distribuido bajo la licencia GPL 3.0. Mira `LICENSE.txt` para mas información.
 <!-- Contacto -->
 ## Contacto
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Diego Sánchez - [@Clyzer](https://twitter.com/clyzer)
 
-Project Link: [https://github.com/Clyzer/naves-espaciales](https://github.com/Clyzer/naves-espaciales)
+Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.com/Clyzer/naves-espaciales)
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
 
