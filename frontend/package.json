@@ -1,6 +1,7 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Muestra de datos y herramientas para la manipulación de los mismos del proyecto Naves Espaciales",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
