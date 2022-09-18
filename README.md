@@ -35,10 +35,6 @@
       <a href="#sobre-el-proyecto">Sobre el proyecto</a>
       <ul>
         <li><a href="#creado-con">Creado con</a></li>
-      </ul>
-    </li>
-    <li>
-      <ul>
         <li><a href="#requisitos-previos">Requisitos previos</a></li>
         <li><a href="#instalacion">Instalación</a></li>
       </ul>
@@ -126,8 +122,6 @@ _Para mas información revisa la documentación [Documentación](https://github.
 
 <!-- Hoja de ruta -->
 ## Hoja de ruta
-
-EN CONSTRUCCION
 
 - [x] Backend (Express)
   - [x] Conexión con base de datos (PostgreSQL)
