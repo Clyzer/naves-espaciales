@@ -28,7 +28,7 @@ app.get('/agregar', (request, response) => {
       if (combustible === "SólidoLiquido"){
         combustible = "Sólido + Liquido";
       }
-      db.query("INSERT INTO clyzer."+ request.query.tabla + "(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, '"+ request.query.nombre + "', '" + combustible + "', '" + request.query.pais + "', '" + request.query.actividad + "');", (err, _res) => {
+      db.query("INSERT INTO clyzer."+ request.query.tabla + "(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, '"+ request.query.nombre + "', '" + combustible + "', '" + request.query.pais + "', '" + request.query.actividad + "');", (err) => {
         if (err){
           console.log(err.stack)
         } else {
@@ -45,7 +45,7 @@ app.get('/eliminar', (request, response) => {
   if (!request.query.tabla || !request.query.id){
     response.json({ error: "Error al borrar la nave de la base de datos. (Faltan datos)" })
   } else {
-    db.query("DELETE FROM clyzer." + request.query.tabla + " WHERE id = " + request.query.id + ";", (err, _res) => {
+    db.query("DELETE FROM clyzer." + request.query.tabla + " WHERE id = " + request.query.id + ";", (err) => {
       if (err){
         console.log(err.stack)
       } else {
