@@ -6,11 +6,15 @@ const start = () => {
         if (res.rowCount == 0) {
             db.query("CREATE SCHEMA IF NOT EXISTS clyzer AUTHORIZATION postgres;", (err) => {
                 console.log(err ? err.stack : "Creado schema.")
-                creardatosiniciales()
+                creardatoslanzaderas();
+                creardatostripuladas();
+                creardatosnotripuladas();
             })
         } else {
             console.log(err ? err.stack : "El schema ya esta creado.")
-            creardatosiniciales()
+            creardatoslanzaderas();
+            creardatostripuladas();
+            creardatosnotripuladas();
         }
     })
 
@@ -320,12 +324,6 @@ const start = () => {
                 console.log(err ? err.stack : "La tabla notripuladas ya esta creada.")
             }
         })
-    }
-
-    function creardatosiniciales () {
-        creardatoslanzaderas();
-        creardatostripuladas();
-        creardatosnotripuladas();
     }
 }
 
