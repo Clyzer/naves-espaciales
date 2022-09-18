@@ -1,7 +1,12 @@
 const db = require('./db')
 
 const start = () => {
-    
+
+    /* Esta es la parte mas engorosa del codigo, ya que necesitaba agregar datos de prueba iniciales (ademas de que son necesarios para el test)
+       tuve que realizar muchisimas querys y ya que se ejecutan de manera asyncrona tuve que unirlos a las respuestas de anteriores llamadas
+       para realizar diferentes chequeos, como que el schem o las tablas esten creadas antes de intentar agregarles datos para no saturarlos ni duplicarlos 
+       esta primera query sirve como base para crear la schema en caso de que no exista y apartir de ahi crear las tablas seguidos de sus datos 
+       dividi todo en varias funciones para una lectura un poco mas facil */
     db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'clyzer';", (err, res) => {
         if (res.rowCount == 0) {
             db.query("CREATE SCHEMA IF NOT EXISTS clyzer AUTHORIZATION postgres;", (err) => {
@@ -18,6 +23,8 @@ const start = () => {
         }
     })
 
+    /* Esta funcion es llamada desde la primera query y se encarga de agregar la tabla de lanzaderas y sus datos en caso de que no esten agregados desde antes
+       si lo que se busca es recrear los datos se necesita borrar la tabla desde tu gestor de base de datos (PG Admin 4, etc) o el schema completo */
     function creardatoslanzaderas() {
         db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'lanzaderas';", (err, res) => {
             if (res.rowCount == 0) {
@@ -104,6 +111,9 @@ const start = () => {
             }
         })
     }
+
+    /* Esta funcion es llamada desde la primera query y se encarga de agregar la tabla de naves tripuladas y sus datos en caso de que no esten agregados desde antes
+       si lo que se busca es recrear los datos se necesita borrar la tabla desde tu gestor de base de datos (PG Admin 4, etc) o el schema completo */
 
     function creardatostripuladas() {
         db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tripuladas';", (err, res) => {
@@ -195,6 +205,9 @@ const start = () => {
             }
         })
     }
+
+    /* Esta funcion es llamada desde la primera query y se encarga de agregar la tabla de naves no tripuladas y sus datos en caso de que no esten agregados desde antes
+       si lo que se busca es recrear los datos se necesita borrar la tabla desde tu gestor de base de datos (PG Admin 4, etc) o el schema completo */
 
     function creardatosnotripuladas(){
         db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'notripuladas';", (err, res) => {
@@ -326,5 +339,7 @@ const start = () => {
         })
     }
 }
+
+// Por ultimo se configura para que la funcion start se inicie automaticamente al ser llamada desde index
 
 module.exports = start()
