@@ -1,8 +1,9 @@
-require('./iniciacion');
-const express = require("express");
-const bodyParser = require("body-parser");
-const db = require('./db')
-const app = express();
+require("./iniciacion")
+const express = require("express")
+const bodyParser = require("body-parser")
+const cors = require("cors")
+const db = require("./db")
+const app = express()
 
 app.use(bodyParser.json())
 app.use(
@@ -10,6 +11,9 @@ app.use(
     extended: true,
   })
 )
+
+app.use(cors())
+app.use(express.json())
 
 app.get('/', (_request, response) => {
   response.json({ info: "Funcionando" })
@@ -20,9 +24,13 @@ app.get('/agregar', (request, response) => {
     response.json({ error: "Error al agregar la nave a la base de datos. (Faltan datos)" })
   } else {
     if (request.query.tabla == "lanzaderas" || request.query.tabla == "notripuladas" || request.query.tabla == "tripuladas"){
-      db.query("INSERT INTO clyzer."+ request.query.tabla + "(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, '"+ request.query.nombre + "', '" + request.query.combustible + "', '" + request.query.pais + "', '" + request.query.actividad + "');", (err, _res) => {
+      var combustible = request.query.combustible;
+      if (combustible === "SólidoLiquido"){
+        combustible = "Sólido + Liquido";
+      }
+      db.query("INSERT INTO clyzer."+ request.query.tabla + "(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, '"+ request.query.nombre + "', '" + combustible + "', '" + request.query.pais + "', '" + request.query.actividad + "');", (err, _res) => {
         if (err){
-          response.log(err.stack)
+          console.log(err.stack)
         } else {
           response.json({ success: "Nave agregada correctamente a la base de datos." })
         }
@@ -37,9 +45,9 @@ app.get('/eliminar', (request, response) => {
   if (!request.query.tabla || !request.query.id){
     response.json({ error: "Error al borrar la nave de la base de datos. (Faltan datos)" })
   } else {
-    db.query("DELETE * FROM clyzer." + request.query.tabla + " WHERE id = '" + request.query.id + "';", (err, _res) => {
+    db.query("DELETE FROM clyzer." + request.query.tabla + " WHERE id = " + request.query.id + ";", (err, _res) => {
       if (err){
-        response.log(err.stack)
+        console.log(err.stack)
       } else {
         response.json({ success: "Nave eliminada correctamente de la base de datos." })
       }

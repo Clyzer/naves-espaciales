@@ -206,12 +206,12 @@ const start = () => {
                             console.log(err.stack)
                         }
                     })
-                    db.query("INSERT INTO clyzer.notripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Venera IV', 'Ninguno', 'Rusia', '1967');", (err, res) => {
+                    db.query("INSERT INTO clyzer.notripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Venera IV', 'Ninguno', 'Rusia', '1967-Act');", (err, res) => {
                         if (err){
                             console.log(err.stack)
                         }
                     })
-                    db.query("INSERT INTO clyzer.notripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Venera IX', 'Ninguno', 'Rusia', '1975');", (err, res) => {
+                    db.query("INSERT INTO clyzer.notripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Venera IX', 'Ninguno', 'Rusia', '1975-Act');", (err, res) => {
                         if (err){
                             console.log(err.stack)
                         }
@@ -232,7 +232,7 @@ const start = () => {
                 db.query("CREATE TABLE IF NOT EXISTS clyzer.tripuladas (id serial, nombre text, combustible text, pais text, actividad text, PRIMARY KEY (id));", (err, res) => {
                     console.log(err ? err.stack : "Creada tabla tripuladas")
                     // Agregado de datos de naves tripuladas de EEUU
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Dragon V2', 'Sólido', 'EEUU', '2016');", (err, res) => {
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Dragon V2', 'Sólido', 'EEUU', '2016-Act');", (err, res) => {
                         if (err){
                             console.log(err.stack)
                         }
@@ -262,7 +262,7 @@ const start = () => {
                             console.log(err.stack)
                         }
                     })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Unid. Maniobra tripulada', 'Ninguno', 'EEUU', '1987');", (err, res) => {
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Unid. Maniobra tripulada', 'Ninguno', 'EEUU', '1987-Act');", (err, res) => {
                         if (err){
                             console.log(err.stack)
                         }
