@@ -238,13 +238,17 @@ const linknavegador = {
   textDecoration: "none"
 };
 
+const margetabla = {
+  marginBottom: 100
+}
+
 // Lanzaderas
 const Lanzaderas = () => {
   return (
     <div className="col-lg-8 mx-auto p-4 py-md-5">{Navegador("lanzaderas")}
       <div className="nav-link text-center"><h2><NavLink style={linknavegador} to="/tripuladas"> {'< '}</NavLink>Lanzaderas<NavLink style={linknavegador} to="/notripuladas"> {'>'}</NavLink></h2></div>
       <br></br><br></br>
-      <div className="tabla border rounded">
+      <div className="tabla border rounded" style={margetabla}>
         {CrearTabla("lanzaderas")}
       </div>
     </div>
@@ -257,7 +261,7 @@ const Tripuladas = () => {
     <div className="col-lg-8 mx-auto p-4 py-md-5">{Navegador("tripuladas")}
       <div className="nav-link text-center"><h2>Tripuladas<NavLink style={linknavegador} to="/lanzaderas"> {'>'}</NavLink></h2></div>
       <br></br><br></br>
-      <div className="tabla border rounded">
+      <div className="tabla border rounded" style={margetabla}>
         {CrearTabla("tripuladas")}
       </div>
     </div>
@@ -270,7 +274,7 @@ const NoTripuladas = () => {
     <div className="col-lg-8 mx-auto p-4 py-md-5">{Navegador("notripuladas")}
       <div className="nav-link text-center"><h2><NavLink style={linknavegador} to="/lanzaderas"> {'< '}</NavLink>No Tripuladas</h2></div>
         <br></br><br></br>
-        <div className="tabla border rounded">
+        <div className="tabla border rounded" style={margetabla}>
         {CrearTabla("notripuladas")}
       </div>
     </div>
@@ -342,7 +346,7 @@ const PaginaCreador = () => {
           <h2 className="text-center">Agregar nave espacial</h2>
         </div>
       </div>
-      <div className="col-lg-4 mx-auto p-4 py-md-1 border">
+      <div className="col-lg-4 mx-auto p-4 py-md-1 border" style={margetabla}>
         <br></br>
         {/* eslint-disable-next-line */}
         <form onSubmit={enviar}>
