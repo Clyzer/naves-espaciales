@@ -5,9 +5,9 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && npm run build",
-    "start": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run start\"",
-    "dev": "concurrently \"cd backend && npm run devstart\" \"cd frontend && npm run start\""
+    "build": "cd frontend && npm ci && npm run build",
+    "start": "concurrently \"cd backend && npm ci && npm run start\" \"cd frontend && npm ci && npm run start\"",
+    "dev": "concurrently \"cd backend && npm ci && npm run devstart\" \"cd frontend && npm ci && npm run start\""
   },
   "repository": {
     "type": "git",
