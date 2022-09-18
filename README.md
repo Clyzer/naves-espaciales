@@ -79,14 +79,14 @@ Un reto técnico personal para SofkaU (Training League) que permite explorar, cr
   npm install express@latest -g
   ```
 
-### Instalacion
+### Instalación
 
 1. Clonar el repositorio en tu IDE favorito o con la consola
    ```sh
    git clone https://github.com/Clyzer/naves-espaciales.git
    ```
 2. Revisar que los datos de ingreso a la base de datos sean correctos en "/backend/db.js"
-    - En caso de que no sea asi cambialos a los tuyos, no hace falta crear ningun schema o tabla, 
+    - En caso de que no sea así cambialos a los tuyos, no hace falta crear ningún schema o tabla, 
       el usuario tiene que tener todos los privilegios en la base de datos.
 3. Instalar paquetes desde NPM
    ```sh
