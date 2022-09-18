@@ -14,7 +14,7 @@ const start = () => {
         }
     })
 
-    function creardatosiniciales () {
+    function creardatoslanzaderas() {
         db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'lanzaderas';", (err, res) => {
             if (res.rowCount == 0) {
                 db.query("CREATE TABLE IF NOT EXISTS clyzer.lanzaderas (id serial, nombre text, combustible text, pais text, actividad text, PRIMARY KEY (id));", (err) => {
@@ -99,7 +99,100 @@ const start = () => {
                 console.log(err ? err.stack : "La tabla lanzaderas ya esta creada.")
             }
         })
-    
+    }
+
+    function creardatostripuladas() {
+        db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tripuladas';", (err, res) => {
+            if (res.rowCount == 0) {
+                db.query("CREATE TABLE IF NOT EXISTS clyzer.tripuladas (id serial, nombre text, combustible text, pais text, actividad text, PRIMARY KEY (id));", (err) => {
+                    console.log(err ? err.stack : "Creada tabla tripuladas")
+                    // Agregado de datos de naves tripuladas de EEUU
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Dragon V2', 'Sólido', 'EEUU', '2016-Act');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Apolo', 'Liquido', 'EEUU', '1966-1975');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Módulo Lunar', 'Liquido', 'EEUU', '1968-1972');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Gemini', 'Sólido', 'EEUU', '1964-1966');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Mercury', 'Ninguno', 'EEUU', '1959-1963');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Orbitador del T.E.', 'Liquido', 'EEUU', '1981-2011');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Unid. Maniobra tripulada', 'Ninguno', 'EEUU', '1987-Act');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Skylab', 'Ninguno', 'EEUU', '1973-1979');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    // Agregado de datos de naves tripuladas de Rusia
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Vostok', 'Liquido', 'Rusia', '1960-1963');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Voskhod', 'Liquido', 'Rusia', '1964-1965');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Soyuz', 'Liquido', 'Rusia', '1967-Act');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Mir', 'Ninguno', 'Rusia', '1986-2001');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Salyut', 'Ninguno', 'Rusia', '1982-1991');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    // Agregado de datos de naves tripuladas internacionales
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'EEI', 'Ninguno', 'Internacional', '1998-Act');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                    // Agregado de datos de naves tripuladas de China
+                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Shenzou', 'Liquido', 'China', '1999-Act');", (err) => {
+                        if (err){
+                            console.log(err.stack)
+                        }
+                    })
+                })
+            } else {
+                console.log(err ? err.stack : "La tabla tripuladas ya esta creada.")
+            }
+        })
+    }
+
+    function creardatosnotripuladas(){
         db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'notripuladas';", (err, res) => {
             if (res.rowCount == 0) {
                 db.query("CREATE TABLE IF NOT EXISTS clyzer.notripuladas (id serial, nombre text, combustible text, pais text, actividad text, PRIMARY KEY (id));", (err) => {
@@ -227,94 +320,12 @@ const start = () => {
                 console.log(err ? err.stack : "La tabla notripuladas ya esta creada.")
             }
         })
-        db.query("SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tripuladas';", (err, res) => {
-            if (res.rowCount == 0) {
-                db.query("CREATE TABLE IF NOT EXISTS clyzer.tripuladas (id serial, nombre text, combustible text, pais text, actividad text, PRIMARY KEY (id));", (err) => {
-                    console.log(err ? err.stack : "Creada tabla tripuladas")
-                    // Agregado de datos de naves tripuladas de EEUU
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Dragon V2', 'Sólido', 'EEUU', '2016-Act');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Apolo', 'Liquido', 'EEUU', '1966-1975');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Módulo Lunar', 'Liquido', 'EEUU', '1968-1972');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Gemini', 'Sólido', 'EEUU', '1964-1966');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Mercury', 'Ninguno', 'EEUU', '1959-1963');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Orbitador del T.E.', 'Liquido', 'EEUU', '1981-2011');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Unid. Maniobra tripulada', 'Ninguno', 'EEUU', '1987-Act');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Skylab', 'Ninguno', 'EEUU', '1973-1979');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    // Agregado de datos de naves tripuladas de Rusia
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Vostok', 'Liquido', 'Rusia', '1960-1963');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Voskhod', 'Liquido', 'Rusia', '1964-1965');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Soyuz', 'Liquido', 'Rusia', '1967-Act');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Mir', 'Ninguno', 'Rusia', '1986-2001');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Salyut', 'Ninguno', 'Rusia', '1982-1991');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    // Agregado de datos de naves tripuladas internacionales
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'EEI', 'Ninguno', 'Internacional', '1998-Act');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                    // Agregado de datos de naves tripuladas de China
-                    db.query("INSERT INTO clyzer.tripuladas(id, nombre, combustible, pais, actividad) VALUES (DEFAULT, 'Shenzou', 'Liquido', 'China', '1999-Act');", (err) => {
-                        if (err){
-                            console.log(err.stack)
-                        }
-                    })
-                })
-            } else {
-                console.log(err ? err.stack : "La tabla tripuladas ya esta creada.")
-            }
-        })
+    }
+
+    function creardatosiniciales () {
+        creardatoslanzaderas();
+        creardatostripuladas();
+        creardatosnotripuladas();
     }
 }
 
