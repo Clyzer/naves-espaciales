@@ -4,6 +4,7 @@
 [![Calidad][codequality-shield]][codequality-url]
 [![Estrellas][stars-shield]][stars-url]
 [![Errores][issues-shield]][issues-url]
+[![Top Lenguaje][toplanguage-shield]][toplanguage-url]
 [![Licencia GPL][license-shield]][license-url]
 
 <!-- LOGO DEL PROYECTO -->
@@ -21,13 +22,11 @@
     <a href="https://github.com/Clyzer/naves-espaciales/wiki"><strong>Explorar documentación »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Clyzer/naves-espaciales">Probar demo</a>
+    <a href="https://github.com/Clyzer/naves-espaciales.git">Clonar repositorio</a>
     ·
     <a href="https://github.com/Clyzer/naves-espaciales/issues">Reportar un error</a>
   </p>
 </div>
-
-
 
 <!-- TABLA DE CONTENIDO-->
 <details>
@@ -40,20 +39,16 @@
       </ul>
     </li>
     <li>
-      <a href="#como-utilizar">Como utilizar</a>
       <ul>
         <li><a href="#requisitos-previos">Requisitos previos</a></li>
         <li><a href="#instalacion">Instalación</a></li>
       </ul>
     </li>
     <li><a href="#uso">Uso</a></li>
-    <li><a href="#hoja-de-ruta">Hoja de ruta</a></li>
     <li><a href="#licencia">Licencia</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ol>
 </details>
-
-
 
 <!-- Sobre el proyecto -->
 ## Sobre el proyecto
@@ -64,46 +59,49 @@ Un reto técnico personal para SofkaU (Training League) que permite explorar, cr
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
 
-
-
 ### Creado con
 
+* [![PostgreSQL][Postgre.sql]][Postgre-url]
 * [![Node][Node.js]][Node-url]
 * [![React][React.js]][React-url]
+* [![ReactBootstrap][ReactBootstrap.css]][ReactBootstrap-url]
 * [![Express][Express.js]][Express-url]
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
 
-
-
-<!-- Como utilizar -->
-## Como utilizar
-
-EN CONSTRUCCION
-
 ### Requisitos previos
 
+* postgreSQL
+  https://www.postgresql.org/download/
 * nodejs
   https://nodejs.org/en/download/
 * react
   ```sh
   npm install react@latest -g
   ```
+* express
+  ```sh
+  npm install express@latest -g
+  ```
 
 ### Instalacion
 
-1. Clonar el repositorio
+1. Clonar el repositorio en tu IDE favorito o con la consola
    ```sh
    git clone https://github.com/Clyzer/naves-espaciales.git
    ```
-2. Instalar paquetes desde NPM
+2. Revisar que los datos de ingreso a la base de datos sean correctos en "/backend/db.js"
+    - En caso de que no sea asi cambialos a los tuyos, no hace falta crear ningun schema o tabla, 
+      el usuario tiene que tener todos los privilegios en la base de datos.
+3. Instalar paquetes desde NPM
    ```sh
-   npm install react@latest -g
+   npm install
    ```
-3. Inicia la aplicación mediante
+4. Inicia la aplicación mediante
    ```sh
-   yarn start
+   npm run start
    ```
+5. Abre tu navegador y navega a "http://localhost:3000"
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
 
@@ -112,7 +110,16 @@ EN CONSTRUCCION
 <!-- Ejemplos de uso -->
 ## Uso
 
-_Para mas ejemplos revisa la documentacion [Documentation](https://example.com)_
+En la página principal puedes ver la tabla de lanzaderas, puedes moverte entre los tipos de naves espaciales dándole clic a los botones "<" y ">"
+ - Si haces doble clic en una fila de la tabla puedes borrar esa nave espacial de la base de datos
+ - Puedes ordenar la tabla por Nombre, Combustible, País y Actividad de manera tanto descendente como ascendente
+ - Al escribir en el buscador se irán filtrando las diferentes naves espaciales por Nombre, Combustible, País o Actividad según lo prefieras
+ - Abajo de la tabla puedes elegir el número de filas por páginas y también moverte entre estas
+En el menú de arriba al darle clic a Agregar nave accederás a una página de creación de naves espaciales
+ - Debes llenar todos los datos necesarios antes de darle clic al botón Agregar o presionar Enter
+ - La selección de tiempo en actividad de la nave espacial no permite que la barra "Hasta" sea inferior a la barra "Desde"
+
+_Para mas información revisa la documentación [Documentación](https://github.com/Clyzer/naves-espaciales/wiki)_
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
 
@@ -123,12 +130,27 @@ _Para mas ejemplos revisa la documentacion [Documentation](https://example.com)_
 
 EN CONSTRUCCION
 
-- [ ] Backend
-- [ ] Frontend
+- [x] Backend (Express)
+  - [x] Conexión con base de datos (PostgreSQL)
+  - [x] Enviar datos mediante JSON
+    - [x] Envió de las naves espaciales según el tipo (SELECT)
+  - [x] Recibir datos mediante GET
+    - [x] Escribir en la base de datos con lo recibido en GET (INSERT)
+    - [x] Eliminar de la base de datos con lo recibido en GET (DELETE)
+- [x] Frontend (React)
+  - [x] Responsive (Bootstrap)
+  - [x] Tabla con datos recibidos mediante JSON
+    - [x] Sistema de páginas y moverse entre ellas sin redirección
+    - [x] Sistema de filas por página
+  - [x] Buscador integrado en la tabla
+  - [x] Cambio de tablas mediante menú
+  - [x] Creador de naves espaciales
+  - [x] Eliminar naves espaciales (mediante doble clic en la tabla)
+  - [x] Estilizado con CSS
+  - [x] Diseño dinámico (React)
+- [x] Empaquetado en una sola aplicación maestra
 
 <p align="right">(<a href="#inicio">volver arriba</a>)</p>
-
-
 
 <!-- Licencia -->
 ## Licencia
@@ -159,12 +181,18 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 [stars-url]: https://github.com/Clyzer/naves-espaciales/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Errores
 [issues-url]: https://github.com/Clyzer/naves-espaciales/issues
+[toplanguage-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?style=for-the-badge
+[toplanguage-url]: https://github.com/Clyzer/naves-espaciales/
 [license-shield]: https://img.shields.io/github/license/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Licencia
 [license-url]: https://github.com/Clyzer/naves-espaciales/blob/master/LICENSE.txt
-[product-screenshot]: images/captura.png
+[product-screenshot]: /frontend/public/images/captura.png
+[Postgre.sql]: https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql
+[Postgre-url]: https://www.postgresql.org/
 [Node.js]: https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=node.js
 [Node-url]: https://nodejs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react
 [React-url]: https://reactjs.org/
+[ReactBootstrap.css]: https://img.shields.io/badge/React--Bootstrap-20232A?style=for-the-badge&logo=bootstrap
+[ReactBootstrap-url]: https://react-bootstrap.github.io
 [Express.js]: https://img.shields.io/badge/Express-20232A?style=for-the-badge&logo=express
 [Express-url]: https://expressjs.com
