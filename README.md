@@ -1,6 +1,6 @@
 <a name="inicio"></a>
 
-[![Lenguaje][language-shield]][language-url]
+[![Build][build-shield]][build-url]
 [![Calidad][codequality-shield]][codequality-url]
 [![Estrellas][stars-shield]][stars-url]
 [![Errores][issues-shield]][issues-url]
@@ -151,8 +151,8 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 
 
 <!-- MARKDOWN -->
-[language-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?style=for-the-badge&label=Lenguaje
-[language-url]: https://github.com/Clyzer/naves-espaciales/
+[build-shield]: https://img.shields.io/github/workflow/status/clyzer/naves-espaciales/Node.js%20CI?style=for-the-badge
+[build-url]: https://github.com/Clyzer/naves-espaciales/actions
 [codequality-shield]: https://img.shields.io/codefactor/grade/github/Clyzer/naves-espaciales?style=for-the-badge&label=calidad
 [codequality-url]: https://www.codefactor.io/repository/github/clyzer/naves-espaciales
 [stars-shield]: https://img.shields.io/github/stars/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Estrellas
