@@ -107,7 +107,7 @@ Un reto técnico personal para SofkaU (Training League) que permite explorar, cr
 
 - En la página principal puedes ver la tabla de lanzaderas, puedes moverte entre los tipos de naves espaciales dándole clic a los botones "<" y ">"
   - Si haces doble clic en una fila de la tabla puedes borrar esa nave espacial de la base de datos
-  - Puedes ordenar la tabla por Nombre, Combustible, País y Actividad de manera tanto descendente como ascendente
+  - Puedes ordenar la tabla por Nombre, Combustible, País y Actividad de manera tanto descendente como ascendente haciéndole clic a la columna
   - Al escribir en el buscador se irán filtrando las diferentes naves espaciales por Nombre, Combustible, País o Actividad según lo prefieras
   - Abajo de la tabla puedes elegir el número de filas por páginas y también moverte entre estas
 - En el menú de arriba al darle clic a Agregar nave accederás a una página de creación de naves espaciales
