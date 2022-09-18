@@ -92,7 +92,7 @@ function CrearTabla() {
       paginationComponentOptions={paginationComponentOptions}
       responsive
       expandableRowsComponent={ExpandedComponent}
-			progressPending={pending}
+      progressPending={pending}
       progressComponent={<Cargando />}
     />
 

@@ -1,17 +1,19 @@
+require('./iniciacion');
 const express = require("express");
-const mysql = require("mysql");
+const bodyParser = require("body-parser");
+const db = require('./db')
 const app = express();
 
-const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "Naves"
-})
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
 
-app.get("/", (req, res) => {
-    res.send("Funcionando");
-});
+app.get('/', (request, response) => {
+    response.json({ info: 'Funcionando' })
+  })
 
 app.listen(3001, () => {
     console.log("Funcionando en el puerto 3001")
