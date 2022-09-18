@@ -2,7 +2,6 @@
 
 [![Build][build-shield]][build-url]
 [![Calidad][codequality-shield]][codequality-url]
-[![Estrellas][stars-shield]][stars-url]
 [![Errores][issues-shield]][issues-url]
 [![Top Lenguaje][toplanguage-shield]][toplanguage-url]
 [![Licencia GPL][license-shield]][license-url]
@@ -110,14 +109,14 @@ Un reto técnico personal para SofkaU (Training League) que permite explorar, cr
 <!-- Ejemplos de uso -->
 ## Uso
 
-En la página principal puedes ver la tabla de lanzaderas, puedes moverte entre los tipos de naves espaciales dándole clic a los botones "<" y ">"
- - Si haces doble clic en una fila de la tabla puedes borrar esa nave espacial de la base de datos
- - Puedes ordenar la tabla por Nombre, Combustible, País y Actividad de manera tanto descendente como ascendente
- - Al escribir en el buscador se irán filtrando las diferentes naves espaciales por Nombre, Combustible, País o Actividad según lo prefieras
- - Abajo de la tabla puedes elegir el número de filas por páginas y también moverte entre estas
-En el menú de arriba al darle clic a Agregar nave accederás a una página de creación de naves espaciales
- - Debes llenar todos los datos necesarios antes de darle clic al botón Agregar o presionar Enter
- - La selección de tiempo en actividad de la nave espacial no permite que la barra "Hasta" sea inferior a la barra "Desde"
+- En la página principal puedes ver la tabla de lanzaderas, puedes moverte entre los tipos de naves espaciales dándole clic a los botones "<" y ">"
+  - Si haces doble clic en una fila de la tabla puedes borrar esa nave espacial de la base de datos
+  - Puedes ordenar la tabla por Nombre, Combustible, País y Actividad de manera tanto descendente como ascendente
+  - Al escribir en el buscador se irán filtrando las diferentes naves espaciales por Nombre, Combustible, País o Actividad según lo prefieras
+  - Abajo de la tabla puedes elegir el número de filas por páginas y también moverte entre estas
+- En el menú de arriba al darle clic a Agregar nave accederás a una página de creación de naves espaciales
+  - Debes llenar todos los datos necesarios antes de darle clic al botón Agregar o presionar Enter
+  - La selección de tiempo en actividad de la nave espacial no permite que la barra "Hasta" sea inferior a la barra "Desde"
 
 _Para mas información revisa la documentación [Documentación](https://github.com/Clyzer/naves-espaciales/wiki)_
 
@@ -177,8 +176,6 @@ Link del proyecto: [https://github.com/Clyzer/naves-espaciales](https://github.c
 [build-url]: https://github.com/Clyzer/naves-espaciales/actions
 [codequality-shield]: https://img.shields.io/codefactor/grade/github/Clyzer/naves-espaciales?style=for-the-badge&label=calidad
 [codequality-url]: https://www.codefactor.io/repository/github/clyzer/naves-espaciales
-[stars-shield]: https://img.shields.io/github/stars/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Estrellas
-[stars-url]: https://github.com/Clyzer/naves-espaciales/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Clyzer/naves-espaciales.svg?style=for-the-badge&label=Errores
 [issues-url]: https://github.com/Clyzer/naves-espaciales/issues
 [toplanguage-shield]: https://img.shields.io/github/languages/top/clyzer/naves-espaciales?style=for-the-badge
